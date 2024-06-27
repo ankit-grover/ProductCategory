@@ -49,27 +49,30 @@ await schema.createTable('product', (table) => {
   await connection.table('product').insert([
     {
       id: 'FjcJCHJALA4i',
-      name: 'Polo Neck T-Shirt',
-      description: 'T-Shirt Polo Neck for Men.',
+      name: 'T-Shirt',
+      description: 'T-Shirt for Men.',
       price:499.90,
       categoryId: 'f3YtshBZpK0o',
-      stock:20
+      stock:20,
+      image: "images/product/men-tshirt1.jpg"
     },
     {
       id: 'Gu7QW9LcnF5d',
-      name: 'Crop Top',
-      description: 'Crop Top for Women.',
+      name: 'Dress',
+      description: 'An elegant dress for women',
       price:699.90,
       categoryId: 'f3YtopBZpK0o',
-      stock:12
+      stock:12,
+      image: "images/product/women-dress1.jpg"
     },
     {
         id: 'Gu7QW9LcnYUg',
-        name: 'Purse',
-        description: 'Purse / Bag for Women.',
+        name: 'Handbag',
+        description: 'Elegant handbag for everyday use',
         price:899.90,
         categoryId: 'f3YBagBZpK0o',
-        stock:15
+        stock:15,
+      image: "images/product/handbag.jpg"
       },
   ]);
   process.exit();

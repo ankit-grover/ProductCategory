@@ -11,6 +11,10 @@ export async function getProducts() {
     return await getProductTable().first().where({ id });
   }
 
+  export async function getProductsByCategory(categoryId) {
+    return await getProductTable().where({ categoryId });
+  }
+  
   export async function createProduct({ name, description,categoryId, stock, price }) {
     const product = {
       id: generateId(),

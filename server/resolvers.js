@@ -1,5 +1,5 @@
 import { createCategory, deleteCategory, getCategories, getCategory, updateCategory } from "./db/categoryQueries.js";
-import { createProduct, deleteProduct, getProduct, getProducts, updateProduct } from "./db/productQueries.js";
+import { createProduct, deleteProduct, getProduct, getProducts, getProductsByCategory, updateProduct } from "./db/productQueries.js";
 
 
 export const resolvers = {
@@ -19,7 +19,10 @@ export const resolvers = {
               throw notFoundError('No Category found with id ' + id);
             }
             return category;
-          }
+          },
+          productsByCategory: async (_, { categoryId }) => {
+            return await getProductsByCategory(categoryId);
+          },
     },
     Product : {
       category: (product) => getCategory(product.categoryId),

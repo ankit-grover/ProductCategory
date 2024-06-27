@@ -3,6 +3,7 @@ type Query {
         categories: [Category]
         product(id: ID!):Product
         category(id: ID!):Category
+        productsByCategory(categoryId: ID!): [Product!]!
 }
 
 type Product {
@@ -12,6 +13,7 @@ type Product {
     category: Category
     stock: Int
     price: Float
+    image: String
 }
 
 type Category {
