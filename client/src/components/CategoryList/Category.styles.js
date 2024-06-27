@@ -18,11 +18,11 @@ export const CategoryCard = styled(Link)`
   }
 
   .card-title {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgb(11 11 11 / 19%);
+    background: black;
     color: white;
     padding: 10px;
     text-align: center;
